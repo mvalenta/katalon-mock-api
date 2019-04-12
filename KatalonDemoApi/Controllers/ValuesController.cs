@@ -12,9 +12,9 @@ namespace KatalonDemoApi.Controllers
     {
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<object> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new { Data = new[] { new { Name = "name1", Value = "value1" }, new { Name = "name2", Value = "value2" } } };
         }
 
         // GET api/values/5
